@@ -20,7 +20,7 @@ The main goal of this project and for which it is created is to familiarize ours
 * In this project we test the following test groups.
   They are the following:
 
-    * RSS Feeds (it tests to make sure that the allFeeds variable has been defined and that it is notempty),
+    * RSS Feeds (it tests to make sure that the allFeeds variable has been defined and that it is not empty),
     * The Menu (it tests that ensures the menu element is hidden by default),
     * Initial Entries(it tests that ensures when the loadFeed function is called and completes its work, and there is at least a single .entry element within the .feed container),
     * New Feed Selection(its tests that ensures when a new feed is loaded by the loadFeed function that the content actually changes)
