@@ -98,9 +98,24 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-  
-    });
+        var startEntrys,
+            endEntrys;
 
-    
+        beforeEach( (done) => {
+            $('.feed').empty();
+            loadFeed(0,  () => {
+                startEntrys = $('.feed').find(allFeeds.url);
+                done();
+            });
+            loadFeed(1,  () => {
+                endEntrys = $('.feed').find(allFeeds.url);
+                done();
+            });
+        });
+
+        it('both entries should be different', () => {
+            expect(startEntrys).not.toBe(endEntrys);
+        });
+    });
         
 }());
